@@ -9,10 +9,14 @@ print(app.config['SQLALCHEMY_DATABASE_URI'])
 db = SQLAlchemy(app)
 
 @app.route('/')
-def hello_world():
+def index():
     #return 'Hello World!'
     return render_template("index.html")
 
+@app.route('/map')
+def map():
+    #return 'Hello World!'
+    return render_template("map.html")
 
 if __name__ == '__main__':
     app.run()
