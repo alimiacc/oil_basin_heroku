@@ -10,7 +10,7 @@ const chartColor = [ '#17BECF', '#1a53ff', '#336600', '#003366', '#cc3300' ];
 
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
-    Plotly.d3.csv(`/static/data/${csvFile[index]}.csv`, function(rows) {
+    Plotly.d3.csv(`../data/${csvFile[index]}.csv`, function(rows) {
 console.log("hello", index)
         var trace1 = {
             type: "scatter",
