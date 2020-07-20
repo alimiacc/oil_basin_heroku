@@ -13,7 +13,7 @@ const comments = [ "Producedcomments", "Supplied_comments", "Ucommetnsices", "co
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
     Plotly.d3.csv(`./static/data/${csvFile[index]}.csv`, function(rows) {
-        console.log("hello", comments)
+        console.log("hello", comments[index])
         var trace1 = {
             type: "scatter",
             mode: "lines",
@@ -22,7 +22,7 @@ function chartSelection(index=0) {
             name: chartLegend[index],
             line: {color: chartColor[index]}
         };
-
+        blah = comments[index]
         var data = [trace1];
 
         // To be defined via dialog box entry by the user if the time permits
@@ -60,8 +60,8 @@ function chartSelection(index=0) {
             showlegend: true
         };
         // Needs to use newPlot method to overwite the existing plot    
-        Plotly.newPlot('plotdiv', data, layout);
-
+        Plotly.newPlot('plotdiv', data, layout, blah);
+        
     });
 }
 
@@ -79,3 +79,9 @@ document.getElementById("chartdropdown")
             chartSelection(this.value);
         }
 );
+
+// document.getElementById("commentary")
+//         .addEventListener("change", function() {
+//             commentFunction(this.value);
+//         }
+// );
