@@ -61,7 +61,9 @@ function chartSelection(index=0) {
         };
         // Needs to use newPlot method to overwite the existing plot    
         Plotly.newPlot('plotdiv', data, layout, blah);
-        
+        document.getElementById("commentary").innerHTML = comments[index]
+
+
     });
 }
 
