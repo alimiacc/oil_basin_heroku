@@ -8,10 +8,12 @@ const chartLegend = [ "Oil Production", "Oil Consumption", "Gasoline Prices", "D
 /* Needs to change chart line colors */
 const chartColor = [ '#17BECF', '#1a53ff', '#336600', '#003366', '#cc3300' ];
 
+const comments = [ "Producedcomments", "Supplied_comments", "Ucommetnsices", "commetnses", "Wcommentsces" ];
+
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
     Plotly.d3.csv(`./static/data/${csvFile[index]}.csv`, function(rows) {
-console.log("hello", index)
+        console.log("hello", comments)
         var trace1 = {
             type: "scatter",
             mode: "lines",
