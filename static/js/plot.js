@@ -3,7 +3,7 @@
 // Defome three unique arrays with data for the CSV file, the y trace column name, and the chart title selections corresponding to different chart types
 const csvFile = [ "Produced_WK_Data", "Supplied_WK_Data", "UNL_Gas_WK_Prices", "Diesel_WK_Prices", "WTI_DL_Spot_Prices" ];
 const yTraceEntry = [ 'Produced', 'Supplied', 'Price', 'Price', 'Price' ];
-const chartName = [ "US Weekly Oil Production", "US Weekly Oil Consumption", "US Weekly UNL Gasoline Prices", "US Weekly Diesel Prices", "Cushing WTI Daily Spot Prices" ];
+const chartName = [ "US Weekly Oil Production (Thousand Barrels per Day)", "US Weekly Oil Consumption (Thousand Barrels per Day)", "US Weekly UNL Gasoline Prices ($US)", "US Weekly Diesel Prices ($US)", "Cushing WTI Daily Spot Prices ($US)" ];
 const chartLegend = [ "Oil Production", "Oil Consumption", "Gasoline Prices", "Diesel Prices", "Oil Spot Prices" ];
 /* Needs to change chart line colors */
 const chartColor = [ '#17BECF', '#1a53ff', '#336600', '#003366', '#cc3300' ];
