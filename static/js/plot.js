@@ -8,7 +8,11 @@ const chartLegend = [ "Oil Production", "Oil Consumption", "Gasoline Prices", "D
 /* Needs to change chart line colors */
 const chartColor = [ '#17BECF', '#1a53ff', '#336600', '#003366', '#cc3300' ];
 
-const comments = [ "Producedcomments", "Supplied_comments", "Ucommetnsices", "commetnses", "Wcommentsces" ];
+const comments = [ "US Weekly Oil Production is witnessing the largest and drop fastest in US history following the Covid-19 shutdown across the world. Normally a fall in oil prices would cause a slower drop in onshore oil production like we witnesses in 2016. However, this time spot prices for crude oil dropped into negative territory across many onshore oil basins in the US due to storage capacity becoming overwhelmed. This caused almost all US oil companies to shut ins some of their oil wells and it also caused the largest drop in US Completions Crews and US Rig Counts in modern history. The combination of these factors is causing US Oil Production to plummet.",
+ "US Weekly Oil Consumption has witnessed the largest and fastest drop in US history due to the Covid-19 US shut down. Millions of Americans stopped driving to work, planes reduced flying, and less oil byproducts were being consumed. Even though jet fuel consumption is still down over 30% the US Oil Consumption is still recovering. The economy is starting open up again and many people are shunning public transportation to drive their cars, which is causing increased gasoline consumption in the US.",
+ "US Gasoline prices have dropped dramatically during the Covid-19 shut down due to a combination of falling oil prices and less people driving to work. However, the US Gasoline prices are recovering quickly as the US economy opens up and more people are driving their cars instead of using public transit that is less gasoline intensive.",
+ "US Diesel Prices have dropped from the Covid-19 shut downs but the drop has been less significant. The drop in Diesel Prices has been attributed to the drop in Oil Prices, however Diesel consumptions has only slightly decreased as semi-truck and truck driving has remained resilient as more products started being delivered to homes.",
+ "Crude Oil Prices have seen the most significant drop in world history due to the Covid-19 shut downs. Western Texas Intermediate Oil Prices - based on oil prices in Cushing Oklahoma and Texas - had seen spot prices fall all the way to -$37 a barrel. It was the first time oil prices had traded negative in the US. This was cause by a loss in oil demand, oil wells continuing to produce too much oil, and oil storage capacity running out in many areas. As storage ran out many landlocked oil fields could only sell at negative oil prices. Oil companies were burning cash with every barrel of oil they produced, which forced widespread oil well shut ins." ];
 
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
@@ -22,7 +26,7 @@ function chartSelection(index=0) {
             name: chartLegend[index],
             line: {color: chartColor[index]}
         };
-        blah = comments[index]
+        
         var data = [trace1];
 
         // To be defined via dialog box entry by the user if the time permits
@@ -60,7 +64,7 @@ function chartSelection(index=0) {
             showlegend: true
         };
         // Needs to use newPlot method to overwite the existing plot    
-        Plotly.newPlot('plotdiv', data, layout, blah);
+        Plotly.newPlot('plotdiv', data, layout);
         document.getElementById("commentary").innerHTML = comments[index]
 
 
@@ -82,8 +86,3 @@ document.getElementById("chartdropdown")
         }
 );
 
-// document.getElementById("commentary")
-//         .addEventListener("change", function() {
-//             commentFunction(this.value);
-//         }
-// );
