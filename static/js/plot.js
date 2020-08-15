@@ -14,6 +14,8 @@ const comments = [ "US Weekly Oil Production is witnessing the largest and faste
  "US Diesel Prices have dropped from the Covid-19 shut downs but the drop has been less significant. The drop in Diesel Prices has been attributed to the drop in Oil Prices, however Diesel consumption has only slightly decreased as semi-truck and truck driving has remained resilient as more products started being delivered to homes.",
  "Crude Oil Prices have seen the most significant drop in world history due to the Covid-19 shut downs. Western Texas Intermediate Oil Prices - based on oil prices in Cushing Oklahoma and Texas - had seen spot prices fall all the way to -$37 a barrel. It was the first time oil prices had traded negative in the US. This was cause by a loss in oil demand, oil wells continuing to produce too much oil, and oil storage capacity running out in many areas. As storage ran out many landlocked oil fields could only sell at negative oil prices. Oil companies were burning cash with every barrel of oil they produced, which forced widespread oil well shut ins." ];
 
+ //For Nisha
+const regression = [ , , , , ]
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
     Plotly.d3.csv(`./static/data/${csvFile[index]}.csv`, function(rows) {
@@ -86,3 +88,9 @@ document.getElementById("chartdropdown")
         }
 );
 
+// Implement an event listener to catch chart selection updates
+document.getElementById("chartdropdownNG")
+        .addEventListener("change", function() {
+            chartSelection(this.value);
+        }
+);
