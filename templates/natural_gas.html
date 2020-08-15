@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Impact of COVID-19 on US Natural Gas Prices.</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: rgb(202, 202, 186);
+    }
+
+
+    th,
+    td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    tbody>tr:nth-child(even) {
+      background-color: #f2f2f2 !important
+    }
+
+    tbody>tr:nth-child(odd) {
+      background-color: #fff !important
+    }
+
+    /* th {
+background-color: #2f3439;
+color: white;
+} */
+  </style>
+</head>
+
+
+
+<div class="container">
+  <nav class="navbar navbar-light bg-light ">
+    <form class="form-inline">
+      <a class="nav-link" href='/map'>
+        <button class="btn btn-outline-success" type="button">Go to Rig Count by Oil Basins</button>
+      </a>
+    </form>
+  </nav>
+
+  <body>
+    <div class="row">
+      <div class="jumbotron"
+        style="background-image: url(https://images.pexels.com/photos/87236/pexels-photo-87236.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260); background-size: 100%;">
+        <h1>Predicting the Impact of COVID-19 on US Natural Gas Prices.</h1>
+        <p>Using the interactive charts below to explore the dataset</p>
+        <p>By: Derek Teed, Nisha Sapkota, and Alimi Mukaila </p>
+      </div>
+    </div>
+    <div class="summary">
+      The outbreak of COVID-19 in the US has caused a dramatic shift in the Natural Gas Industry. The US lockdown and recession in the US is slightly lowering the demand for natural nas. However, the production of natural gas is expected to fall drastically in the next year or two. 
+      The loss of US natural gas production is being caused by a large drop in the number of natural gas rigs and oil rigs. 
+      The loss of natural gas and oil rigs was cause by a huge drop in the prices of natural gas liquids, condensates, dry natural gas, and oil.
+      The subsequent fall in production is predicted to have a large increase in the price of natural gas as supply falls below demand and storage gets depleted.
+      This should cause a short term rise in the cost of electricity and a rise in natural gas rigs.
+   <br><br>
+    </div>
+
+    <div class="showcase__section" id="bubble">
+      <div class="spacer --small"></div>
+      <div id="bubbleplots">
+        <div class="bubbleplot" data-num="0">
+          <div class="control-row">
+            Charts: <select class="countrydata" id="chartdropdown">
+              <option value="0">US Natural Gas Production (Billion Cubic Feet)</option>
+              <option value="1">US Natural Consumption (Million Cubic Feet)</option>
+              <option value="2">US Natural Gas Storage (Billion Cubic Feet</option>
+              <option value="3">US Natural Gas Prices ($US)</option>
+              <option value="4">US Natural Gas Rig Count</option>
+            </select>
+         
+
+          </div>
+          <div class="plot" id="plotdiv"></div>
+         
+          <br>
+          <div id = "commentary">
+
+          </div>
+          <br>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+</div><!-- End of Container -->
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="../static/js/plot.js"></script>
+<!--<script src="./static/js/fireworks.js"></script>-->
+
+
+<!-- Footer -->
+<footer class="page-footer font-small footer-dark">
+  <div class="footer-copyright text-center py-3">© Copyright Team-8 Coding Bootcamp 2020
+  </div>
+</footer>
+
+</body>
+
+</html>
