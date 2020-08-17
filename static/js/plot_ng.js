@@ -1,7 +1,7 @@
 // CSV file is locally stored in static/data folder but could also be hosted, in this case the unpack function should be placed locally inside the top Plotly.d3.csv() wrapper
 
 // Defome three unique arrays with data for the CSV file, the y trace column name, and the chart title selections corresponding to different chart types
-
+                
 const csvNG = ["NG_Production1", "NG_Consumption", "US_Storage","US_Price","NG_Rig_Count"]
 const chartNameNG = ["US Natural Gas Production (Million Cubic Feet, Monthly)","US Natural Consumption (Million Cubic Feet, Monthly)", "US Natural Gas Storage (Billion Cubic Feet, Weekly)", "US Natural Gas Prices ($US, Weekly)","US Natural Gas Rig Count(Weekly)"]
 const chartLegendNG = [ "Natural Gas Production", "Natural Gas Consumption", "Natural Gas Storage", "Natural Gas Prices", "Natural Gas Rig Count" ];
