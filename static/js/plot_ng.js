@@ -8,6 +8,7 @@ const chartLegendNG = [ "Natural Gas Production", "Natural Gas Consumption", "Na
 const yTraceEntryNG = [ 'Production', 'Consumption', 'Storage', 'Price', 'Gas' ];
 const chartColorNG = [ '#17BECF', '#1a53ff', '#336600', '#003366', '#cc3300' ];
 const date2 = ["Month","Month","Week","Week","Date"]
+const dateChart2 = ["Week","Week","Week","Week","Week"]
 const yPriceLegend = ['Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)']
 const yPriceNG = ['Price','Price','Price','Price','Price']
 const chartPriceColor = ['#cc3300', '#336600','#003366', '#1a53ff','#17BECF'];
@@ -59,7 +60,7 @@ function chartSelection(index=0) {
         var trace2 = {
             type: "scatter",
             mode: "lines",
-            x: unpack(rows, date2[index]),
+            x: unpack(rows, dateChart2[index]),
             y: unpack(rows, yPriceNG[index]),
             name: yPriceLegend[index],
             line: {color: chartPriceColor[index]}
