@@ -17,32 +17,12 @@ const chartPriceColor = ['#cc3300', '#336600','#003366', '#1a53ff','#17BECF'];
  //For Nisha
 const regression = [ "Replace with Regression1","Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression4" ,"Replace with Regression5" ]
 
-
-// Plotly.d3.csv(`./static/data/US_Price.csv`, function(row2) {
-    // var trace2 = {
-    //     type: "scatter",
-    //     mode: "lines",
-    //     x: unpack2(row2, "Week"),
-    //     y: unpack2(row2, "Price"), //problem unpack needed?
-    //     name: 'Price Natural Gas($)',
-    //     line: {color: '#17BECF'}
-    
-        
-    //   };
-//       return trace2
-//     })
-
-    var weekrow = []
-    var pricerow = []
-    d3.csv('./static/data/US_Price.csv', function(loadedRows){
-        weekrow.push(loadedRows.Week)
-        pricerow.push(loadedRows.Price)
-    })
-   // var colweekrow = data.map(function(d){ return d.weekrow})
-    //console.log("coolbeans", colweekrow)
-    // weekrow2 = weekrow.map(function(d){ return d.})
-    // console.log("coolbeans", weekrow)
-    // console.log("coolbeans", pricerow)
+var weekrow = []
+var pricerow = []
+d3.csv('./static/data/US_Price.csv', function(loadedRows){
+weekrow.push(loadedRows.Week)
+pricerow.push(loadedRows.Price)
+})
 
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
@@ -65,7 +45,7 @@ function chartSelection(index=0) {
             type: "scatter",
             mode: "lines",
             x: weekrow,
-            y: pricerow, //problem unpack needed?
+            y: pricerow, 
             name: 'Price Natural Gas($)',
             line: {color: '#336600'},
             yaxis: 'y2'
@@ -97,12 +77,12 @@ function chartSelection(index=0) {
                       step: 'month',
                       stepmode: 'backward'
                     },
-                    // {
-                    //     count: 3,
-                    //     label: '3y',
-                    //     step: 'year',
-                    //     stepmode: 'backward'
-                    //   },
+                    {
+                        count: 3,
+                        label: '3y',
+                        step: 'year',
+                        stepmode: 'backward'
+                      },
                     {step: 'all'}
                   ]},
                 rangeslider: {range: [startDate, endDate]},
