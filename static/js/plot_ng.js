@@ -8,7 +8,9 @@ const chartLegendNG = [ "Natural Gas Production", "Natural Gas Consumption", "Na
 const yTraceEntryNG = [ 'Production', 'Consumption', 'Storage', 'Price', 'Gas' ];
 const chartColorNG = [ '#17BECF', '#1a53ff', '#336600', '#003366', '#cc3300' ];
 const date2 = ["Month","Month","Week","Week","Date"]
-
+const yPriceLegend = ['Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)']
+const yPriceNG = ['Price','Price','Price','Price','Price']
+const chartPriceColor = ['#cc3300', '#336600','#003366', '#1a53ff','#17BECF'];
  //For Nisha
 const regression = [ "Replace with Regression1","Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression4" ,"Replace with Regression5" ]
 
@@ -20,15 +22,9 @@ const regression = [ "Replace with Regression1","Replace with Regression2" ,"Rep
 //     type: 'scatter'
 //   };
   
-//   var trace2 = {
-//     x: [2, 3, 4],
-//     y: [4, 5, 6],
-//     name: 'yaxis2 data',
-//     yaxis: 'y2',
-//     type: 'scatter'
-//   };
+
   
-//   var data = [trace1, trace2];
+//   
   
 //   var layout = {
 //     title: 'Double Y Axis Example',
@@ -60,7 +56,18 @@ function chartSelection(index=0) {
             line: {color: chartColorNG[index]}
         };
         
-        var data = [trace1];
+        var trace2 = {
+            type: "scatter",
+            mode: "lines",
+            x: unpack(rows, date2[index]),
+            y: unpack(rows, yPriceNG[index]),
+            name: yPriceLegend[index],
+            line: {color: chartPriceColor[index]}
+
+            
+          };
+
+          var data = [trace1, trace2];
         console.log("data here", data)
         // To be defined via dialog box entry by the user if the time permits
         var startDate = '2010-01-01'; /* dynamic chart start date */
@@ -100,6 +107,13 @@ function chartSelection(index=0) {
                 autorange: true,
                 type: 'linear'
             },
+            yaxis2: {
+                      title: 'Price Natural Gas ($)',
+                      titlefont: {color: 'rgb(148, 103, 189)'},
+                      tickfont: {color: 'rgb(148, 103, 189)'},
+                      overlaying: 'y',
+                      side: 'right'
+                    },
             showlegend: true
         };
         // Needs to use newPlot method to overwite the existing plot    
