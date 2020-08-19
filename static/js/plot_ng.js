@@ -13,7 +13,7 @@ const yPriceNG = ['Price','Price','Price','Price','Price']
 const newCsv = ["US_Price","US_Price","US_Price","US_Price","US_Price"]
 const dateChart2 = ["Week","Week","Week","Week","Week"]
 const yPriceLegend = ['Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)']
-const chartPriceColor = ['#cc3300', '#336600','#003366', '#1a53ff','#17BECF'];
+const chartPriceColor = ['#cc3300', '#336600','#4B0082', '#1a53ff','#17BECF'];
  //For Nisha
 const regression = [ "Replace with Regression1","Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression4" ,"Replace with Regression5" ]
 
@@ -67,7 +67,7 @@ function chartSelection(index=0) {
             x: weekrow,
             y: pricerow, //problem unpack needed?
             name: 'Price Natural Gas($)',
-            line: {color: '#17BECF'},
+            line: {color: '#003366'},
             yaxis: 'y2'
             
           };
@@ -110,13 +110,13 @@ function chartSelection(index=0) {
                 type: 'date'
             },
             yaxis: {
-                titleL: "price"
+               // titleL: "price"
                 // autorange: true,
                 // type: 'linear'
             },
             yaxis2: {
                       title: 'Price Natural Gas ($)',
-                      titlefont: {color: 'rgb(148, 103, 189)'},
+                     // titlefont: {color: 'rgb(148, 103, 189)'},
                       tickfont: {color: 'rgb(148, 103, 189)'},
                       overlaying: 'y',
                       side: 'right'
