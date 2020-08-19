@@ -2,21 +2,21 @@
 
 // Defome three unique arrays with data for the CSV file, the y trace column name, and the chart title selections corresponding to different chart types
                 
-const csvNG = ["NG_Production1", "NG_Consumption", "US_Storage","US_Price","NG_Rig_Count"]
-const chartNameNG = ["US Natural Gas Production (Million Cubic Feet, Monthly)","US Natural Consumption (Million Cubic Feet, Monthly)", "US Natural Gas Storage (Billion Cubic Feet, Weekly)", "US Natural Gas Prices ($US, Weekly)","US Natural Gas Rig Count(Weekly)"]
-const chartLegendNG = [ "Natural Gas Production", "Natural Gas Consumption", "Natural Gas Storage", "Natural Gas Prices", "Natural Gas Rig Count" ];
-const yTraceEntryNG = [ 'Production', 'Consumption', 'Storage', 'Price', 'Gas' ];
-const chartColorNG = [ '#cc3300','#cc3300', '#cc3300', '#cc3300', '#cc3300'];
-const date2 = ["Month","Month","Week","Week","Date"]
-const yPriceNG = ['Price','Price','Price','Price','Price']
+const csvNG = ["NG_Production1", "NG_Consumption", "US_Storage","NG_Rig_Count"]
+const chartNameNG = ["US Natural Gas Production (Million Cubic Feet, Monthly)","US Natural Consumption (Million Cubic Feet, Monthly)", "US Natural Gas Storage (Billion Cubic Feet, Weekly)","US Natural Gas Rig Count(Weekly)"]
+const chartLegendNG = [ "Natural Gas Production", "Natural Gas Consumption", "Natural Gas Storage", "Natural Gas Rig Count" ];
+const yTraceEntryNG = [ 'Production', 'Consumption', 'Storage', 'Gas' ];
+const chartColorNG = [ '#cc3300','#cc3300', '#cc3300', '#cc3300'];
+const date2 = ["Month","Month","Week","Date"]
+const yPriceNG = ['Price','Price','Price','Price']
 
-const newCsv = ["US_Price","US_Price","US_Price","US_Price","US_Price"]
-const dateChart2 = ["Week","Week","Week","Week","Week"]
-const yPriceLegend = ['Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)']
-const chartPriceColor = ['#cc3300', '#336600','#003366', '#1a53ff','#17BECF'];
+const newCsv = ["US_Price","US_Price","US_Price","US_Price"]
+const dateChart2 = ["Week","Week","Week","Week"]
+const yPriceLegend = ['Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)']
+const chartPriceColor = ['#cc3300', '#336600','#003366','#17BECF'];
  //For Nisha
-const regression = [ 'Sample size: 125<br>  The correlation coefficient:-0.56<br>  slope=-194585.045<br> intercept=3105533.7855<br>  rvalue -0.561 <br> pvalue 9.899628808064528e-12 <br> r-squared 0.31497588367743423',"Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression4" ,"Replace with Regression5" ]
-const images = ['<img src="./Correlation/Images/price_vs_production+Imports.png">', 'b;ah','blah','blah','blah']
+const regression = [ 'Sample size: 125<br>  The correlation coefficient:-0.56<br>  slope=-194585.045<br> intercept=3105533.7855<br>  rvalue -0.561 <br> pvalue 9.899628808064528e-12 <br> r-squared 0.31497588367743423',"Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression5" ]
+const images = ['<img src="./Correlation/Images/price_vs_production+Imports.png">', 'b;ah','blah','blah']
 
 var weekrow = []
 var pricerow = []
