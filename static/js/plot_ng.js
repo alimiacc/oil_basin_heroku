@@ -6,7 +6,7 @@ const csvNG = ["NG_Production1", "NG_Consumption", "US_Storage","US_Price","NG_R
 const chartNameNG = ["US Natural Gas Production (Million Cubic Feet, Monthly)","US Natural Consumption (Million Cubic Feet, Monthly)", "US Natural Gas Storage (Billion Cubic Feet, Weekly)", "US Natural Gas Prices ($US, Weekly)","US Natural Gas Rig Count(Weekly)"]
 const chartLegendNG = [ "Natural Gas Production", "Natural Gas Consumption", "Natural Gas Storage", "Natural Gas Prices", "Natural Gas Rig Count" ];
 const yTraceEntryNG = [ 'Production', 'Consumption', 'Storage', 'Price', 'Gas' ];
-const chartColorNG = [ '#17BECF', '#1a53ff', '#4B0082', '#003366', '#cc3300' ];
+const chartColorNG = [ '#cc3300','#cc3300', '#cc3300', '#cc3300', '#cc3300'];
 const date2 = ["Month","Month","Week","Week","Date"]
 const yPriceNG = ['Price','Price','Price','Price','Price']
 
