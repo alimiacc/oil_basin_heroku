@@ -59,7 +59,7 @@ function chartSelection(index=0) {
         };
         
         var data = [trace1];
-
+        console.log("data here", date)
         // To be defined via dialog box entry by the user if the time permits
         var startDate = '2010-01-01'; /* dynamic chart start date */
         var endDate = '2020-08-13';   /* dynamic chart end date */
@@ -82,12 +82,12 @@ function chartSelection(index=0) {
                       step: 'month',
                       stepmode: 'backward'
                     },
-                    {
-                        count: 3,
-                        label: '3y',
-                        step: 'year',
-                        stepmode: 'backward'
-                      },
+                    // {
+                    //     count: 3,
+                    //     label: '3y',
+                    //     step: 'year',
+                    //     stepmode: 'backward'
+                    //   },
                     {step: 'all'}
                   ]},
                 rangeslider: {range: [startDate, endDate]},
