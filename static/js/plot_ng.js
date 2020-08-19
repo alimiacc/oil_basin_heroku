@@ -8,39 +8,14 @@ const chartLegendNG = [ "Natural Gas Production", "Natural Gas Consumption", "Na
 const yTraceEntryNG = [ 'Production', 'Consumption', 'Storage', 'Price', 'Gas' ];
 const chartColorNG = [ '#17BECF', '#1a53ff', '#336600', '#003366', '#cc3300' ];
 const date2 = ["Month","Month","Week","Week","Date"]
+const yPriceNG = ['Price','Price','Price','Price','Price']
+
+const newCsv = ["US_Price","US_Price","US_Price","US_Price","US_Price"]
 const dateChart2 = ["Week","Week","Week","Week","Week"]
 const yPriceLegend = ['Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)']
-const yPriceNG = ['Price','Price','Price','Price','Price']
 const chartPriceColor = ['#cc3300', '#336600','#003366', '#1a53ff','#17BECF'];
  //For Nisha
 const regression = [ "Replace with Regression1","Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression4" ,"Replace with Regression5" ]
-
-
-// var trace1 = {
-//     x: [1, 2, 3],
-//     y: [40, 50, 60],
-//     name: 'yaxis data',
-//     type: 'scatter'
-//   };
-  
-
-  
-//   
-  
-//   var layout = {
-//     title: 'Double Y Axis Example',
-//     yaxis: {title: 'yaxis title'},
-//     yaxis2: {
-//       title: 'yaxis2 title',
-//       titlefont: {color: 'rgb(148, 103, 189)'},
-//       tickfont: {color: 'rgb(148, 103, 189)'},
-//       overlaying: 'y',
-//       side: 'right'
-//     }
-//   };
-  
-//   Plotly.newPlot('myDiv', data, layout);
-
 
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
@@ -60,8 +35,8 @@ function chartSelection(index=0) {
         var trace2 = {
             type: "scatter",
             mode: "lines",
-            x: unpack(rows, dateChart2[index]),
-            y: unpack(rows, yPriceNG[index]),
+            x: unpack(Plotly.d3.csv('./static/data/US_Price.csv'), dateChart2[index]),
+            y: unpack(Plotly.d3.csv('./static/data/US_Price.csv'), yPriceNG[index]), //problem unpack needed?
             name: yPriceLegend[index],
             line: {color: chartPriceColor[index]}
 
