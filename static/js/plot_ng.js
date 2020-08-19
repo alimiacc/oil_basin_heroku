@@ -17,10 +17,15 @@ const chartPriceColor = ['#cc3300', '#336600','#003366', '#1a53ff','#17BECF'];
  //For Nisha
 const regression = [ "Replace with Regression1","Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression4" ,"Replace with Regression5" ]
 
+
+
+
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
-    Plotly.d3.csv(`./static/data/${csvNG[index]}.csv`, function(rows) {
+    Plotly.d3.csv(`./static/data/${csvNG[index]}.csv`,   function(rows) {
+       
         poo = Plotly.d3.csv('./static/data/US_Price.csv')
+        console.log(poo)
         console.log("hello hello",csvNG[index])
         console.log(rows)
         console.log(`static/data/${csvNG[index]}.csv`)
@@ -33,16 +38,19 @@ function chartSelection(index=0) {
             line: {color: chartColorNG[index]}
         };
         
-        var trace2 = {
-            type: "scatter",
-            mode: "lines",
-            x: unpack2(poo, dateChart2[index]),
-            y: unpack2(poo, yPriceNG[index]), //problem unpack needed?
-            name: yPriceLegend[index],
-            line: {color: chartPriceColor[index]}
-
+        Plotly.d3.csv(`./static/data/US_Price.csv`, function(row2) {
+            var trace2 = {
+                type: "scatter",
+                mode: "lines",
+                x: unpack2(row2, dateChart2[index]),
+                y: unpack2(row2, yPriceNG[index]), //problem unpack needed?
+                name: yPriceLegend[index],
+                line: {color: chartPriceColor[index]}
             
-          };
+                
+              };
+              return trace2
+            })
 
           var data = [trace1, trace2];
         console.log("data here", data)
@@ -107,10 +115,10 @@ function unpack(rows, key) {
     return rows.map(function(row) { return row[key]; });
     //return poo.map(function(row) { return row[key]; });
 }
-function unpack2(poo, key) {
+function unpack2(row2, key) {
 
     
-    return poo.map(function(row3) { return row3[key]; });
+    return row2.map(function(row3) { return row3[key]; });
 }
 
 // Initialize the chart
