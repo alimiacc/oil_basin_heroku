@@ -15,7 +15,7 @@ const dateChart2 = ["Week","Week","Week","Week","Week"]
 const yPriceLegend = ['Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)']
 const chartPriceColor = ['#cc3300', '#336600','#003366', '#1a53ff','#17BECF'];
  //For Nisha
-const regression = [ 'Sample size: 125. The correlation coefficient:-0.56, the LinregressResult(slope=-194585.045,<br> intercept=3105533.7855 rvalue -0.561 pvalue 9.899628808064528e-12$ r-squared 0.31497588367743423',"Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression4" ,"Replace with Regression5" ]
+const regression = [ 'Sample size: 125<br>  The correlation coefficient:-0.56<br>  slope=-194585.045<br> intercept=3105533.7855<br>  rvalue -0.561 <br> pvalue 9.899628808064528e-12 <br> r-squared 0.31497588367743423',"Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression4" ,"Replace with Regression5" ]
 const images = ['<img src="./Correlation/Images/price_vs_production+Imports.png">', 'b;ah','blah','blah','blah']
 
 var weekrow = []
