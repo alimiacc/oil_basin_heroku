@@ -24,8 +24,8 @@ Plotly.d3.csv(`./static/data/US_Price.csv`, function(row2) {
         mode: "lines",
         x: unpack2(row2, "Week"),
         y: unpack2(row2, "Price"), //problem unpack needed?
-        name: yPriceLegend[index],
-        line: {color: chartPriceColor[index]}
+        name: 'Price Natural Gas($)',
+        line: {color: '#17BECF'}
     
         
       };
