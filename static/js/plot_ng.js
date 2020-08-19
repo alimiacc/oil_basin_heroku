@@ -6,14 +6,14 @@ const csvNG = ["NG_Production1", "NG_Consumption", "US_Storage","US_Price","NG_R
 const chartNameNG = ["US Natural Gas Production (Million Cubic Feet, Monthly)","US Natural Consumption (Million Cubic Feet, Monthly)", "US Natural Gas Storage (Billion Cubic Feet, Weekly)", "US Natural Gas Prices ($US, Weekly)","US Natural Gas Rig Count(Weekly)"]
 const chartLegendNG = [ "Natural Gas Production", "Natural Gas Consumption", "Natural Gas Storage", "Natural Gas Prices", "Natural Gas Rig Count" ];
 const yTraceEntryNG = [ 'Production', 'Consumption', 'Storage', 'Price', 'Gas' ];
-const chartColorNG = [ '#17BECF', '#1a53ff', '#336600', '#003366', '#cc3300' ];
+const chartColorNG = [ '#17BECF', '#1a53ff', '#4B0082', '#003366', '#cc3300' ];
 const date2 = ["Month","Month","Week","Week","Date"]
 const yPriceNG = ['Price','Price','Price','Price','Price']
 
 const newCsv = ["US_Price","US_Price","US_Price","US_Price","US_Price"]
 const dateChart2 = ["Week","Week","Week","Week","Week"]
 const yPriceLegend = ['Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)']
-const chartPriceColor = ['#cc3300', '#336600','#4B0082', '#1a53ff','#17BECF'];
+const chartPriceColor = ['#cc3300', '#336600','#003366', '#1a53ff','#17BECF'];
  //For Nisha
 const regression = [ "Replace with Regression1","Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression4" ,"Replace with Regression5" ]
 
@@ -67,7 +67,7 @@ function chartSelection(index=0) {
             x: weekrow,
             y: pricerow, //problem unpack needed?
             name: 'Price Natural Gas($)',
-            line: {color: '#003366'},
+            line: {color: '#336600'},
             yaxis: 'y2'
             
           };
@@ -110,13 +110,13 @@ function chartSelection(index=0) {
                 type: 'date'
             },
             yaxis: {
-               // titleL: "price"
+                title: "price"
                 // autorange: true,
                 // type: 'linear'
             },
             yaxis2: {
-                      title: 'Price Natural Gas ($)',
-                     // titlefont: {color: 'rgb(148, 103, 189)'},
+                      //title: 'Price Natural Gas ($)',
+                      titlefont: {color: 'rgb(148, 103, 189)'},
                       tickfont: {color: 'rgb(148, 103, 189)'},
                       overlaying: 'y',
                       side: 'right'
