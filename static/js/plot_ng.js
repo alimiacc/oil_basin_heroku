@@ -16,7 +16,7 @@ const yPriceLegend = ['Price Natural Gas($)','Price Natural Gas($)','Price Natur
 const chartPriceColor = ['#cc3300', '#336600','#003366','#17BECF'];
  //For Nisha
 const regression = [ 'Sample size: 125<br>  The correlation coefficient:-0.56<br>  slope=-194585.045<br> intercept=3105533.7855<br>  rvalue -0.561 <br> pvalue 9.899628808064528e-12 <br> r-squared 0.31497588367743423',"Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression5" ]
-const images = ['<img src="Correlation/Images/production.png">', '<img src="./../Correlation/Images/consumption.png">','<img src="../../Correlation/Images/storage.png">','<img src="../Correlation/Images/rig.png">']
+const images = ['<img src="Correlation/Images/production.png">', '<img src="./../Correlation/Images/consumption.png">','<img src="../../Correlation/Images/storage.png">','<img src="rig.png">']
 
 var weekrow = []
 var pricerow = []
