@@ -22,8 +22,8 @@ Plotly.d3.csv(`./static/data/US_Price.csv`, function(row2) {
     var trace2 = {
         type: "scatter",
         mode: "lines",
-        x: unpack2(row2, dateChart2[index]),
-        y: unpack2(row2, yPriceNG[index]), //problem unpack needed?
+        x: unpack2(row2, "Week"),
+        y: unpack2(row2, "Price"), //problem unpack needed?
         name: yPriceLegend[index],
         line: {color: chartPriceColor[index]}
     
