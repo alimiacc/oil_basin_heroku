@@ -20,6 +20,7 @@ const regression = [ "Replace with Regression1","Replace with Regression2" ,"Rep
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
     Plotly.d3.csv(`./static/data/${csvNG[index]}.csv`, function(rows) {
+        poo = Plotly.d3.csv('./static/data/US_Price.csv')
         console.log("hello hello",csvNG[index])
         console.log(rows)
         console.log(`static/data/${csvNG[index]}.csv`)
@@ -35,8 +36,8 @@ function chartSelection(index=0) {
         var trace2 = {
             type: "scatter",
             mode: "lines",
-            x: unpack(Plotly.d3.csv('./static/data/US_Price.csv'), dateChart2[index]),
-            y: unpack(Plotly.d3.csv('./static/data/US_Price.csv'), yPriceNG[index]), //problem unpack needed?
+            x: unpack2(poo, dateChart2[index]),
+            y: unpack2(poo, yPriceNG[index]), //problem unpack needed?
             name: yPriceLegend[index],
             line: {color: chartPriceColor[index]}
 
@@ -102,7 +103,14 @@ function chartSelection(index=0) {
 
 // Function unpacking row based CSV data into column based arrays
 function unpack(rows, key) {
+
     return rows.map(function(row) { return row[key]; });
+    //return poo.map(function(row) { return row[key]; });
+}
+function unpack2(poo, key) {
+
+    
+    return poo.map(function(row3) { return row3[key]; });
 }
 
 // Initialize the chart
