@@ -55,8 +55,8 @@ function chartSelection(index=0) {
         var trace1 = {
             type: "scatter",
             mode: "lines",
-            x: unpack(rows, date2[index]),
-            y: unpack(rows, yTraceEntryNG[index]),
+            x: weekrow,
+            y: pricerow,
             name: chartLegendNG[index],
             line: {color: chartColorNG[index]}
         };
