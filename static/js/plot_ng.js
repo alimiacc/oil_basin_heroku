@@ -40,9 +40,9 @@ const regression = [ "Replace with Regression1","Replace with Regression2" ,"Rep
     })
    // var colweekrow = data.map(function(d){ return d.weekrow})
     //console.log("coolbeans", colweekrow)
-    weekrow2 = weekrow.map(function(d){ return d.})
-    console.log("coolbeans", weekrow)
-    console.log("coolbeans", pricerow)
+    // weekrow2 = weekrow.map(function(d){ return d.})
+    // console.log("coolbeans", weekrow)
+    // console.log("coolbeans", pricerow)
 
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
