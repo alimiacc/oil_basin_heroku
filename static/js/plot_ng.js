@@ -15,7 +15,8 @@ const dateChart2 = ["Week","Week","Week","Week","Week"]
 const yPriceLegend = ['Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)']
 const chartPriceColor = ['#cc3300', '#336600','#003366', '#1a53ff','#17BECF'];
  //For Nisha
-const regression = [ "Replace with Regression1","Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression4" ,"Replace with Regression5" ]
+const regression = [ "Sample size: 125. The correlation coefficient:-0.56, the LinregressResult(slope=-194585.04522740367", intercept=3105533.785544644, rvalue=-0.561227123077132, pvalue=9.899628808064528e-12, stderr=25874.45333567644), r-squared: 0.31497588367743423","Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression4" ,"Replace with Regression5" ]
+const images = ['<img src="./Correlation/Images/price_vs_production+Imports.png">', 'b;ah','blah','blah','blah']
 
 var weekrow = []
 var pricerow = []
@@ -106,7 +107,7 @@ function chartSelection(index=0) {
         // Needs to use newPlot method to overwite the existing plot    
         Plotly.newPlot('plotdiv2', data, layout);
         document.getElementById("regression").innerHTML = regression[index]
-
+        document.getElementById("image").innerHTML = images[index]
 
     });
 }
