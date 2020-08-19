@@ -48,7 +48,9 @@ const regression = [ "Replace with Regression1","Replace with Regression2" ,"Rep
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
     Plotly.d3.csv(`./static/data/${csvNG[index]}.csv`, function(rows) {
-        console.log("hello",csvNG[index])
+        console.log("hello hello",csvNG[index])
+        console.log(rows)
+        console.log(`static/data/${csvNG[index]}.csv`)
         var trace1 = {
             type: "scatter",
             mode: "lines",
@@ -59,10 +61,10 @@ function chartSelection(index=0) {
         };
         
         var data = [trace1];
-        console.log("data here", date)
+        console.log("data here", data)
         // To be defined via dialog box entry by the user if the time permits
         var startDate = '2010-01-01'; /* dynamic chart start date */
-        var endDate = '2020-08-13';   /* dynamic chart end date */
+        var endDate = '2020-09-01';   /* dynamic chart end date */
 
         var layout = {
             title: chartNameNG[index],
