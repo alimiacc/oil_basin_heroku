@@ -110,14 +110,15 @@ function chartSelection(index=0) {
                 type: 'date'
             },
             yaxis: {
-                autorange: true,
-                type: 'linear'
+                titleL: "price"
+                // autorange: true,
+                // type: 'linear'
             },
             yaxis2: {
                       title: 'Price Natural Gas ($)',
                       titlefont: {color: 'rgb(148, 103, 189)'},
                       tickfont: {color: 'rgb(148, 103, 189)'},
-                      overlaying: y,
+                      overlaying: 'y',
                       side: 'right'
                     },
             showlegend: true
