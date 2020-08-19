@@ -23,6 +23,12 @@ def natural_gas():
     #return 'Hello World!'
     return render_template("natural_gas.html")
 
+
+@app.route('/Correlation/Images/price_vs_production+Imports.png')
+def natural_gas():
+    #return 'Hello World!'
+    return render_template("Correlation/Images/price_vs_production+Imports.png")
+
 if __name__ == '__main__':
     app.run()
 
