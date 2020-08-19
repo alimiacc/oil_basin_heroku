@@ -18,7 +18,19 @@ const chartPriceColor = ['#cc3300', '#336600','#003366', '#1a53ff','#17BECF'];
 const regression = [ "Replace with Regression1","Replace with Regression2" ,"Replace with Regression3" ,"Replace with Regression4" ,"Replace with Regression5" ]
 
 
-
+Plotly.d3.csv(`./static/data/US_Price.csv`, function(row2) {
+    var trace2 = {
+        type: "scatter",
+        mode: "lines",
+        x: unpack2(row2, dateChart2[index]),
+        y: unpack2(row2, yPriceNG[index]), //problem unpack needed?
+        name: yPriceLegend[index],
+        line: {color: chartPriceColor[index]}
+    
+        
+      };
+      return trace2
+    })
 
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
@@ -38,19 +50,7 @@ function chartSelection(index=0) {
             line: {color: chartColorNG[index]}
         };
         
-        Plotly.d3.csv(`./static/data/US_Price.csv`, function(row2) {
-            var trace2 = {
-                type: "scatter",
-                mode: "lines",
-                x: unpack2(row2, dateChart2[index]),
-                y: unpack2(row2, yPriceNG[index]), //problem unpack needed?
-                name: yPriceLegend[index],
-                line: {color: chartPriceColor[index]}
-            
-                
-              };
-              return trace2
-            })
+     
 
           var data = [trace1, trace2];
         console.log("data here", data)
