@@ -19,16 +19,16 @@ const regression = [ "Replace with Regression1","Replace with Regression2" ,"Rep
 
 
 // Plotly.d3.csv(`./static/data/US_Price.csv`, function(row2) {
-//     var trace2 = {
-//         type: "scatter",
-//         mode: "lines",
-//         x: unpack2(row2, "Week"),
-//         y: unpack2(row2, "Price"), //problem unpack needed?
-//         name: 'Price Natural Gas($)',
-//         line: {color: '#17BECF'}
+    // var trace2 = {
+    //     type: "scatter",
+    //     mode: "lines",
+    //     x: unpack2(row2, "Week"),
+    //     y: unpack2(row2, "Price"), //problem unpack needed?
+    //     name: 'Price Natural Gas($)',
+    //     line: {color: '#17BECF'}
     
         
-//       };
+    //   };
 //       return trace2
 //     })
 
@@ -55,12 +55,21 @@ function chartSelection(index=0) {
         var trace1 = {
             type: "scatter",
             mode: "lines",
-            x: weekrow,
-            y: pricerow,
+            x: unpack(rows, date2[index]),
+            y: unpack(rows, yTraceEntryNG[index]),
             name: chartLegendNG[index],
             line: {color: chartColorNG[index]}
         };
+        var trace2 = {
+            type: "scatter",
+            mode: "lines",
+            x: weekrow,
+            y: pricerow, //problem unpack needed?
+            name: 'Price Natural Gas($)',
+            line: {color: '#17BECF'}
         
+            
+          };
      
 
           var data = [trace1, trace2];
