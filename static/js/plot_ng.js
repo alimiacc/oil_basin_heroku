@@ -30,8 +30,8 @@ pricerow.push(loadedRows.Price)
 
 // Chart Selector function to update the index value from [ 0 to 4 ] depeonding on the user's chart selection provided by HTML dropdown element
 function chartSelection(index=0) {   
-    Plotly.d3.csv(`./static/data/${csvNG[index]}.csv`,   function(rows) {
-       
+    Plotly.d3.csv(`https://data-bootcamp-dt.s3.us-east-2.amazonaws.com/data/${csvNG[index]}.csv`,   function(rows) {
+//Plotly.d3.csv(`./static/data/${csvNG[index]}.csv`,   function(rows) {
         poo = Plotly.d3.csv('./static/data/US_Price.csv')
         console.log(poo)
         console.log("hello hello",csvNG[index])
