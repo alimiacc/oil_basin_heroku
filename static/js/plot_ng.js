@@ -19,7 +19,7 @@ const regression = [ 'Sample size: 125<br>  The correlation coefficient:-0.56<br
 "Sample size: 125<br> The correlation coefficient:-0.23<br> slope=-128885.379<br> intercept=2885601.063<br> rvalue=-0.226<br> pvalue=0.0111<br> stderr=49989.945<br> r-squared: 0.0512" ,
 "Sample size: 554<br> The correlation coefficient:-0.2<br> the LinregressResult(slope=-164.53893583334747<br> intercept=3250.3688074381325<br> rvalue=-0.1986<br> pvalue=2.464239202284745e-06<br> stderr=34.559<br> r-squared: 0.0394" ,
 "Sample size: 522<br> The correlation coefficient:0.57<br> slope=183.778<br> intercept=-216.070<br> rvalue=0.571<br> pvalue=1.6411252882405985e-46<br> stderr=11.584<br> r-squared: 0.326" ]
-const images = ['<link href="https://data-bootcamp-dt.s3.us-east-2.amazonaws.com/Images/production.jpg">', '<img src="./../Correlation/Images/consumption.png">','<img src="../../Correlation/Images/storage.png">','<link href="rig.png">']
+const images = ['<img src="https://data-bootcamp-dt.s3.us-east-2.amazonaws.com/Images/production.jpg"></img>', '<img src="./../Correlation/Images/consumption.png">','<img src="../../Correlation/Images/storage.png">','<link href="rig.png">']
 
 var weekrow = []
 var pricerow = []
