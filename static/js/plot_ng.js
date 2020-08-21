@@ -11,10 +11,10 @@ const dateChart2 = ["Week","Week","Week","Week"]
 const yPriceLegend = ['Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)']
 const chartPriceColor = ['#cc3300', '#336600','#003366','#17BECF'];
 
-const header = ["<h5>US Natural Gas Production has a Statistically Significant Moderate Negative Relationship on US Natural Gas Prices</h5>",
-"<h5>US Natural Gas Production has a Statistically Significant Weak Negative Relationship on US Natural Gas Prices </h5>",
-"<h5>US Natural Gas Storage has a Statistically Significant Weak Negative Relationship on US Natural Gas Prices</h5>",
-"<h5>US Natural Gas Rig Count has a Statistically Significant Moderate Positive Relationship on US Natural Gas Prices</h5>"]
+const header = ["<h4>US Natural Gas Production has a Statistically Significant Moderate Negative Relationship on US Natural Gas Prices</h4>",
+"<h4>US Natural Gas Production has a Statistically Significant Weak Negative Relationship on US Natural Gas Prices </h4>",
+"<h4>US Natural Gas Storage has a Statistically Significant Weak Negative Relationship on US Natural Gas Prices</h4>",
+"<h4>US Natural Gas Rig Count has a Statistically Significant Moderate Positive Relationship on US Natural Gas Prices</h4>"]
 const regression = [ '<Sample size: 125<br>  The correlation coefficient:-0.56<br>  slope=-194585.045<br> intercept=3105533.785<br>  rvalue -0.561 <br> pvalue 9.899e-12 <br> r-squared 0.315',
 "Sample size: 125<br> The correlation coefficient:-0.23<br> slope=-128885.379<br> intercept=2885601.063<br> rvalue=-0.226<br> pvalue=0.0111<br> stderr=49989.945<br> r-squared: 0.0512" ,
 "Sample size: 554<br> The correlation coefficient:-0.2<br> slope=-164.539<br> intercept=3250.368<br> rvalue=-0.1986<br> pvalue=2.464e-06<br> stderr=34.559<br> r-squared: 0.0394" ,
