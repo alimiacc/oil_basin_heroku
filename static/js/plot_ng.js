@@ -20,7 +20,11 @@ const regression = [ '<Sample size: 125<br>  The correlation coefficient:-0.56<b
 "Sample size: 554<br> The correlation coefficient:-0.2<br> slope=-164.539<br> intercept=3250.368<br> rvalue=-0.1986<br> pvalue=2.464e-06<br> stderr=34.559<br> r-squared: 0.0394" ,
 "Sample size: 522<br> The correlation coefficient:0.57<br> slope=183.778<br> intercept=-216.070<br> rvalue=0.571<br> pvalue=1.641e-46<br> stderr=11.584<br> r-squared: 0.326" ]
 const regressionImages = ['<img src="https://data-bootcamp-dt.s3.us-east-2.amazonaws.com/Images/production.png"></img>', '<img src="https://data-bootcamp-dt.s3.us-east-2.amazonaws.com/Images/consumption.png"></img>','<img src="https://data-bootcamp-dt.s3.us-east-2.amazonaws.com/Images/storage.png"></img>','<img src="https://data-bootcamp-dt.s3.us-east-2.amazonaws.com/Images/rig.png"></img>']
-const predictingPrice = ['<img src=""></img>','','','<img src=""></img>',]
+const predictingPrice = ['<img src="https://data-bootcamp-dt.s3.us-east-2.amazonaws.com/Images/ProdVPrice.png"></img>','','','<img src=""></img>',]
+const predictionCommentary = ["US Natural Gas Price and Production Prediction with scikit-learn models in Python. LinearRegression model was used to make predictions on data instances with an unknown expected outcome. The simple linear regression predicts US Natural Gas form an historical gas price and production. A negative wieght coefficient suggests that as the independent variable increases, the dependent variable tends to decrease. The coefficient value signifies how much the mean of the dependent variable changes given a one-unit shift in the independent variable while holding other variables in the model constant. The wieght coefficicients from the prediction show a negative value implying that as the production of Natural Gas increases the price decrease. The model predicts a minimum price of $1.71 and a maximum price of $5.88 for Natural Gas at minimum production of 1645705 and maximum production of 2542913.US Natural Gas Price and Production Prediction with scikit-learn models in Python.",
+"","",
+""]
+
 
 var weekrow = []
 var pricerow = []
