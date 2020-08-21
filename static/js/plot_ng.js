@@ -97,6 +97,7 @@ function chartSelection(index=0) {
         document.getElementById("regressionImage").innerHTML = regressionImages[index]
         document.getElementById("regressionHead").innerHTML = header[index]
         document.getElementById("predictionImage").innerHTML = predictingPrice[index]
+        document.getElementById("predictionCommentary").innerHTML = predictionCommentary[index]
     });
 }
 
