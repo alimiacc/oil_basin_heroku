@@ -11,10 +11,10 @@ const dateChart2 = ["Week","Week","Week","Week"]
 const yPriceLegend = ['Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)','Price Natural Gas($)']
 const chartPriceColor = ['#cc3300', '#336600','#003366','#17BECF'];
 
-const regression = [ 'Sample size: 125<br>  The correlation coefficient:-0.56<br>  slope=-194585.045<br> intercept=3105533.785<br>  rvalue -0.561 <br> pvalue 9.899628808064528e-12 <br> r-squared 0.31497588367743423',
-"Sample size: 125<br> The correlation coefficient:-0.23<br> slope=-128885.379<br> intercept=2885601.063<br> rvalue=-0.226<br> pvalue=0.0111<br> stderr=49989.945<br> r-squared: 0.0512" ,
-"Sample size: 554<br> The correlation coefficient:-0.2<br> the LinregressResult(slope=-164.53893583334747<br> intercept=3250.3688074381325<br> rvalue=-0.1986<br> pvalue=2.464239202284745e-06<br> stderr=34.559<br> r-squared: 0.0394" ,
-"Sample size: 522<br> The correlation coefficient:0.57<br> slope=183.778<br> intercept=-216.070<br> rvalue=0.571<br> pvalue=1.6411252882405985e-46<br> stderr=11.584<br> r-squared: 0.326" ]
+const regression = [ '<h2>Statistically Significant Moderate Negative Correlation</h2><br>Sample size: 125<br>  The correlation coefficient:-0.56<br>  slope=-194585.045<br> intercept=3105533.785<br>  rvalue -0.561 <br> pvalue 9.899628808064528e-12 <br> r-squared 0.31497588367743423',
+"<h2>Statistically Significant Weak Negative Correlation</h2><br>Sample size: 125<br> The correlation coefficient:-0.23<br> slope=-128885.379<br> intercept=2885601.063<br> rvalue=-0.226<br> pvalue=0.0111<br> stderr=49989.945<br> r-squared: 0.0512" ,
+"<h2>Statistically Significant Weak Negative Correlation</h2><br>Sample size: 554<br> The correlation coefficient:-0.2<br> slope=-164.53893583334747<br> intercept=3250.3688074381325<br> rvalue=-0.1986<br> pvalue=2.464239202284745e-06<br> stderr=34.559<br> r-squared: 0.0394" ,
+"<h2>Statistically Significant Moderate Positive Correlation</h2><br>Sample size: 522<br> The correlation coefficient:0.57<br> slope=183.778<br> intercept=-216.070<br> rvalue=0.571<br> pvalue=1.6411252882405985e-46<br> stderr=11.584<br> r-squared: 0.326" ]
 const regressionImages = ['<img src="https://data-bootcamp-dt.s3.us-east-2.amazonaws.com/Images/production.png"></img>', '<img src="https://data-bootcamp-dt.s3.us-east-2.amazonaws.com/Images/consumption.png"></img>','<img src="https://data-bootcamp-dt.s3.us-east-2.amazonaws.com/Images/storage.png"></img>','<img src="https://data-bootcamp-dt.s3.us-east-2.amazonaws.com/Images/rig.png"></img>']
 const predictingPrice = ['<img src=""></img>','','','<img src=""></img>',]
 
