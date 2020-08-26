@@ -18,6 +18,13 @@ def map():
     #return 'Hello World!'
     return render_template("map.html")
 
+@app.route('/natural_gas')
+def natural_gas():
+    #return 'Hello World!'
+    return render_template("natural_gas.html")
+
+
+
 if __name__ == '__main__':
     app.run()
 

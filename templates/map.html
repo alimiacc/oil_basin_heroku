@@ -37,16 +37,21 @@ h1, h2 {
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link btn btn-secondary" href="/">Back to Home</a>
-      </li>
-      
+      <!-- <li class="nav-item active">
+        <a class="nav-link btn btn-secondary" href="/">Go to Main Oil Pagee</a>
+      </li> -->
+      <a class="nav-link" href='/'>
+        <button class="btn btn-outline-success" type="button">Go to Main Oil Page</button>
+      </a>
+      <a class="nav-link" href='/natural_gas'>
+        <button class="btn btn-outline-success" type="button">Go to Natural Gas Page</button>
+      </a>
     </ul>
   </div>
 </nav>
 <div class="text-things">
     <h1>Interactive US Weekly Oil and Gas Rig Count</h1>
-    <h2>July 10, 2020</h2>   
+    <h2>August 14, 2020</h2>   
 </div>
 
 <svg width="960" height="550"></svg>
@@ -74,7 +79,7 @@ var tip = d3.tip()
       //console.log(d)
       return "Basin: " + d.properties.display_name  +
       "<br>Jan 3, 2020: " + rig2020.get(d.properties.display_name) +
-      "<br>July 10, 2020: " + rigJuly2020.get(d.properties.display_name) +
+      "<br>Aug 14, 2020: " + rigJuly2020.get(d.properties.display_name) +
       "<br>YTD change: " + netChange.get(d.properties.display_name);
       console.log("ANother Look Here",rigJuly2020)
     });
